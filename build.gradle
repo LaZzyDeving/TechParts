@@ -2,12 +2,14 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://maven.parchmentmc.org' }
         mavenCentral()
+        maven { url = 'https://maven.parchmentmc.org' }
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.parchmentmc:librarian:1.+'
+
+
     }
 }
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -18,10 +20,9 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-
-version = '0.0.1-1.18.2'
-group = 'com.lazzydev.grindlessores' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'grindlessores'
+version = '0.0.1'
+group = 'lazzy.techparts' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'techparts'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -41,7 +42,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'parchment', version: '2022.08.21-1.18.2'
+    mappings channel: "${mappings_version}", version: "${minecraft_version}"
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -64,10 +65,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'grindlessores'
+            property 'forge.enabledGameTestNamespaces', 'techparts'
 
             mods {
-                grindlessores {
+                techparts {
                     source sourceSets.main
                 }
             }
@@ -81,10 +82,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'grindlessores'
+            property 'forge.enabledGameTestNamespaces', 'techparts'
 
             mods {
-                grindlessores {
+                techparts {
                     source sourceSets.main
                 }
             }
@@ -109,10 +110,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'grindlessores'
+            property 'forge.enabledGameTestNamespaces', 'techparts'
 
             mods {
-                grindlessores {
+                techparts {
                     source sourceSets.main
                 }
             }
@@ -126,10 +127,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'grindlessores', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'techparts', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                grindlessores {
+                techparts {
                     source sourceSets.main
                 }
             }
@@ -143,24 +144,13 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
-
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    // flatDir {
-    //     dir 'libs'
-    // }
-    maven {
-        url "https://www.cursemaven.com"
-    }
     maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.dev"
-    }
+
+
 
 }
 
@@ -170,10 +160,9 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.69'
 
-    // Real mod deobf dependency examples - these get remapped to your current mappings
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
-    // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
+    //JEI
+    compileOnly fg.deobf("mezz.jei:jei-${jei_version}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-${jei_version}")
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
@@ -181,32 +170,22 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    //modImplementation("net.devtech:brrp:0.8.2-1.8.2")
 
 
 
-    // Tesseract + Antimatter
-    //runtimeOnly fg.deobf("curse.maven:tesseract-462718:3744992")
-    //runtimeOnly fg.deobf("curse.maven:antimatter-462713:3566809")
-
-    // FTB Library
-    //runtimeOnly fg.deobf("curse.maven:ftblib-404465:3909755")
-
-    // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
-    // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "grindlessores",
-                "Specification-Vendor"    : "grindlessoressareus",
+                "Specification-Title"     : "techparts",
+                "Specification-Vendor"    : "techpartssareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "grindlessoressareus",
+                "Implementation-Vendor"   : "techpartssareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
