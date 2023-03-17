@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/brass_block",
+  "textures": {
+    "layer0": "techparts:item/material/dull/block"
+  }
+}

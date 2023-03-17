@@ -1,7 +1,17 @@
 {
+  "item.techparts.brass_dust": "Brass Dust",
+  "item.techparts.brass_ingot": "Brass Ingot",
+  "item.techparts.brass_nugget": "Brass Nugget",
+  "item.techparts.brass_raw_ore": "Raw Brass Ore",
   "item.techparts.computer_monitor": "Computer Monitor",
-  "item.techparts.constantan_dust": "Constantan dust",
-  "item.techparts.constantan_ingot": "Constantan ingot",
+  "item.techparts.constantan_dust": "Constantan Dust",
+  "item.techparts.constantan_ingot": "Constantan Ingot",
+  "item.techparts.constantan_nugget": "Constantan Nugget",
   "item.techparts.constantan_raw_ore": "Raw Constantan Ore",
-  "itemGroup.lazzy.techparts.client.ItemGroup@1f837ac0": "TechParts"
+  "item.techparts.gravi_star": "Gravity Star",
+  "item.techparts.manasteel_dust": "Manasteel Dust",
+  "item.techparts.manasteel_ingot": "Manasteel Ingot",
+  "item.techparts.manasteel_nugget": "Manasteel Nugget",
+  "item.techparts.manasteel_raw_ore": "Raw Manasteel Ore",
+  "itemGroup.lazzy.techparts.TechParts$1@5d98f014": "TechParts"
 }

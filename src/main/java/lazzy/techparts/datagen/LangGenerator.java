@@ -1,12 +1,14 @@
 package lazzy.techparts.datagen;
 
-import lazzy.techparts.items.materials.MaterialParts;
+import lazzy.techparts.items.materials.MatPartItem;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
+import net.silentchaos512.lib.registry.ItemRegistryObject;
 
-import static lazzy.techparts.Ref.*;
-import static lazzy.techparts.items.materials.Materials.materialParts;
+import static lazzy.techparts.Ref.ID;
+import static lazzy.techparts.TechParts.ITEM_GROUP;
+import static lazzy.techparts.setup.MatDeclaration.MATERIAL_PART_ITEMS;
 
 
 public class LangGenerator extends LanguageProvider {
@@ -22,16 +24,18 @@ public class LangGenerator extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add("itemGroup."+TAB_ITEMS,"TechParts");
+        add("itemGroup."+ITEM_GROUP,"TechParts");
 
 
         switch (local){
             case "en_us":
 
                 add("item.techparts.computer_monitor","Computer Monitor");
+                add("item.techparts.gravi_star","Gravity Star");
+
                 //Loop over all materials that exist
-                for(MaterialParts materialParts:materialParts){
-                    addMaterialPartENG(materialParts);
+                for(ItemRegistryObject<? extends MatPartItem> materialParts: MATERIAL_PART_ITEMS){
+                    addMaterialPartENG(materialParts.get());
                 }
             break;
             default:
@@ -40,16 +44,16 @@ public class LangGenerator extends LanguageProvider {
 
     }
 
-    protected void addMaterialPartENG(MaterialParts mP){
-        Item item = mP.getItem().get();
+    protected void addMaterialPartENG(MatPartItem mP){
         String mName = mP.getMaterial().getName();
         String pName = mP.getPart().getName();
+        Item item = mP.asItem();
         switch (mP.getPart()){
             case DENSEPLATE:
-                add(item,"Dense "+mName+" Plate");
+                this.add(item,"Dense "+mName+" Plate");
                 break;
             case RAW:
-                add(item,"Raw "+ mName+" Ore");
+                this.add(item,"Raw "+ mName+" Ore");
                 break;
             case DUST:
             case INGOT:

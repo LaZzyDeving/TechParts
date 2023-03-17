@@ -25,7 +25,7 @@ public enum Parts {
     SMALLGEAR("small_gear"),
     WIRE("wire"),
     ROTOR("rotor"),
-    BUZZSAW("buzzsaw"),
+    BUZZSAW_BLADE("buzzsaw_blade"),
     DENSEPLATE("dense_plate"),
     BLOCK("block"),
     FRAME("frame");

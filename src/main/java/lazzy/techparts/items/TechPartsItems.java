@@ -4,26 +4,53 @@ package lazzy.techparts.items;
 //import static muramasa.gregtech.data.Material.*;
 
 
+import lazzy.techparts.setup.Register;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.silentchaos512.lib.registry.ItemRegistryObject;
 
-import static lazzy.techparts.items.Register.*;
+import java.util.function.Supplier;
 
 public class TechPartsItems {
 
-    //public static RegistryObject<Item> ComputerMonitor = createbasicItem("computer_monitor");
+    public static final DeferredRegister<Item> ITEMS = Register.create(ForgeRegistries.ITEMS);
 
-
-    // Down here to force the Items to be loaded
-    public static void init(){
+    public static void init() {
 
     }
 
-    public static RegistryObject<Item> GraviStar = createItemWithTooltip("gravi_star");
+    public static <T extends Item> ItemRegistryObject<T> register(String name, Supplier<T> item) {
+        return new ItemRegistryObject<>(ITEMS.register(name, item));
+    }
 
 
-    public static RegistryObject<Item> ComputerMonitor = createbasicItem("computer_monitor");
-/*
+    //For "normal" Items
+    public static ItemRegistryObject<Item> registerBasicItem(String name) {
+        // Registers a generic, basic item with no special properties.
+        // Also second step use for MatDeclaration//MatPartItems
+        return register(name, () -> new Item(Register.baseProps()));
+    }
+
+
+
+
+
+
+    //Items starting here
+
+    // TODO: Datagen for Jsons for these
+    public static final ItemRegistryObject<Item> COMPUTER_MONITOR = registerBasicItem("computer_monitor");
+    public static final ItemRegistryObject<Item> GRAVI_STAR = registerBasicItem("gravi_star");
+
+    //To Seperate simple model from advanced models for BasicItems
+
+
+    //Splited from registerSimpleModel and registerBasicItem to also use with MatPartItem
+
+
+    // TODO: 
+    /*
     public static RegistryObject<Item> CellTin = createbasicItem("tin_cell");
     public static RegistryObject<Item> CellSteel = createbasicItem("steel_cell");
     public static RegistryObject<Item> CellTungstensteel = createbasicItem("tungstensteel_cell");

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/constantan_block",
+  "textures": {
+    "layer0": "techparts:item/material/dull/block"
+  }
+}

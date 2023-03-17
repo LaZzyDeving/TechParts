@@ -1,35 +1,47 @@
-package lazzy.techparts.items;
+package lazzy.techparts.setup;
 
 import lazzy.techparts.Ref;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.item.CreativeModeTab;
+import lazzy.techparts.blocks.TechPartsBlocks;
+import lazzy.techparts.items.TechPartsItems;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
-import javax.annotation.Nullable;
-import java.util.List;
+import static lazzy.techparts.TechParts.ITEM_GROUP;
 
 
 public class Register{
+    public static void init(IEventBus eventBus){
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Ref.ID);
+        //Call up all MatPartItems to be created
+        MatDeclaration.init();
+        //Create Items in ITEMS
+        TechPartsItems.init();
 
+        TechPartsItems.ITEMS.register(eventBus);
+        TechPartsBlocks.BLOCKS.register(eventBus);
 
-
-    //public static RegistryObject<Item> computer_monitor = createItemWithTooltip("computer_monitor");
-
-    public static void init(){
-
+        //eventBus.addListener(ClientProxy::registerItemColors);
+        //eventBus.addListener(ClientProxy::registerBlockColors);
     }
 
-    public static <T extends Item> RegistryObject<Item> createbasicItem(String id){
+
+    public static Item.Properties baseProps() {
+        return new Item.Properties().tab(ITEM_GROUP);
+    }
+    //TODO: Declare Blocks with custom Properties
+    public static BlockBehaviour.Properties baseBlockProps() {
+        return BlockBehaviour.Properties.of(Material.METAL);
+    }
+
+
+
+    //TODO: Fix this shit AKA Items with Tooltips
+/*    public static <T extends Item> RegistryObject<Item> createbasicItem(String id){
         return ITEMS.register(id, () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_BREWING)));
     }
     public static <T extends Item> RegistryObject<Item> createItemWithTooltip(String id) {
@@ -60,5 +72,9 @@ public class Register{
                 }
             }
         });
+    }*/
+
+    public static <T extends IForgeRegistryEntry<T>> DeferredRegister<T> create(IForgeRegistry<T> registry) {
+        return DeferredRegister.create(registry, Ref.ID);
     }
 }

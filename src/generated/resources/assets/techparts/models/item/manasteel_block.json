@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/manasteel_block",
+  "textures": {
+    "layer0": "techparts:item/material/dull/block"
+  }
+}
