@@ -47,7 +47,7 @@ public class TechParts
     public static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(Ref.ID) {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(COMPUTER_MONITOR);
+            return new ItemStack(COMPUTER_MONITOR.get());
         }
     };
 }

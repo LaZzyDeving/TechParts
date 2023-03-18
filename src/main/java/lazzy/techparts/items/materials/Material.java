@@ -8,7 +8,7 @@ public enum Material {
     private final String id;
     private final String name;
 
-    private final String texture;
+    private final String style;
 
     Material(int rbg, String id){
         this(rbg,id,id.substring(0,1).toUpperCase() + id.substring(1).toLowerCase());
@@ -18,7 +18,7 @@ public enum Material {
         this.rbg = rbg;
         this.id = id;
         this.name = name;
-        this.texture = "dull";
+        this.style = "dull";
     }
 
     public final int getRbg() {
@@ -35,7 +35,7 @@ public enum Material {
         return this.id;
     }
 
-    public String getTexture() {
-        return texture;
+    public String getStyle() {
+        return style;
     }
 }

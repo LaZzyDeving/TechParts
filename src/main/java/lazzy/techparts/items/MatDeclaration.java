@@ -1,13 +1,15 @@
-package lazzy.techparts.setup;
+package lazzy.techparts.items;
 
-import lazzy.techparts.blocks.MatPartBlock;
-import lazzy.techparts.blocks.TechPartsBlocks;
-import lazzy.techparts.items.TechPartsItems;
-import lazzy.techparts.items.materials.MatPartItem;
+import lazzy.techparts.items.blocks.MatPartBlock;
+import lazzy.techparts.items.blocks.MatPartBlockItem;
+import lazzy.techparts.items.blocks.TechPartsBlocks;
 import lazzy.techparts.items.materials.Material;
 import lazzy.techparts.items.materials.Parts;
-import net.silentchaos512.lib.registry.BlockRegistryObject;
-import net.silentchaos512.lib.registry.ItemRegistryObject;
+import lazzy.techparts.setup.Register;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,8 +20,13 @@ import static lazzy.techparts.items.materials.Parts.*;
 
 public class MatDeclaration{
 
-    public static final Collection<ItemRegistryObject<? extends MatPartItem>> MATERIAL_PART_ITEMS = new ArrayList<>();
-    public static final Collection<BlockRegistryObject<? extends MatPartBlock>> MATERIAL_PART_BLOCKS = new ArrayList<>();
+    public static final DeferredRegister<Item> MAT_ITEMS = Register.create(ForgeRegistries.ITEMS);
+
+
+
+    public static final Collection<RegistryObject<MatPartItem>> MATERIAL_PART_ITEMS = new ArrayList<>();
+    public static final Collection<RegistryObject<? extends MatPartBlock>> MATERIAL_PART_BLOCKS = new ArrayList<>();
+    public static final Collection<RegistryObject<? extends MatPartBlockItem>> MATERIAL_PART_BLOCKITEMS = new ArrayList<>();
     static EnumSet<Parts> metal = EnumSet.of(Parts.DUST,Parts.INGOT,Parts.RAW, NUGGET,BLOCK);
     static EnumSet<Parts> gem = EnumSet.of(Parts.GEM,Parts.LENSE);
 
@@ -32,7 +39,6 @@ public class MatDeclaration{
 
     }
 
-    //TODO: Split for Item and Block and FIX
     public static void createMaterial(Material material, EnumSet<Parts> Group, Parts... whiteList){
         //Array that contains all parts from whitelist and group
         ArrayList<Parts> listOfParts = new ArrayList<Parts>(Arrays.asList(whiteList));
@@ -42,10 +48,10 @@ public class MatDeclaration{
 
             //Add itemlike (Block or ITEM) to materialParts_XXXX for datagen
             if(part==FRAME ||part==BLOCK){
-                BlockRegistryObject<MatPartBlock> block = TechPartsBlocks.registerBlock(material.getID()+"_"+part.getID(),()->new MatPartBlock(material,part));
-                MATERIAL_PART_BLOCKS.add(block);
+
+                MATERIAL_PART_BLOCKS.add(TechPartsBlocks.registerMatPartBlock(material,part));
             } else{
-                MATERIAL_PART_ITEMS.add(TechPartsItems.register(material.getID()+"_"+part.getID(),() -> new MatPartItem(material,part)));
+                MATERIAL_PART_ITEMS.add(TechPartsItems.registerMatPartItem(material,part));
             }
         }
     }

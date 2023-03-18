@@ -1,14 +1,14 @@
 package lazzy.techparts.datagen;
 
-import lazzy.techparts.items.materials.MatPartItem;
+import lazzy.techparts.items.MatPartItem;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.silentchaos512.lib.registry.ItemRegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 
 import static lazzy.techparts.Ref.ID;
 import static lazzy.techparts.TechParts.ITEM_GROUP;
-import static lazzy.techparts.setup.MatDeclaration.MATERIAL_PART_ITEMS;
+import static lazzy.techparts.items.MatDeclaration.MATERIAL_PART_ITEMS;
 
 
 public class LangGenerator extends LanguageProvider {
@@ -34,7 +34,7 @@ public class LangGenerator extends LanguageProvider {
                 add("item.techparts.gravi_star","Gravity Star");
 
                 //Loop over all materials that exist
-                for(ItemRegistryObject<? extends MatPartItem> materialParts: MATERIAL_PART_ITEMS){
+                for(RegistryObject<MatPartItem> materialParts: MATERIAL_PART_ITEMS){
                     addMaterialPartENG(materialParts.get());
                 }
             break;

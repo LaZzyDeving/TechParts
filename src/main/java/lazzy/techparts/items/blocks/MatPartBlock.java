@@ -1,16 +1,16 @@
-package lazzy.techparts.blocks;
+package lazzy.techparts.items.blocks;
 
 import lazzy.techparts.items.materials.Material;
 import lazzy.techparts.items.materials.Parts;
 import lazzy.techparts.setup.Register;
-import lazzy.techparts.setup.client.IColorHandler;
+import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public class MatPartBlock extends Block implements IColorHandler {
+public class MatPartBlock extends Block implements BlockColor {
 
     private final Material material;
     private final Parts part;
@@ -30,7 +30,7 @@ public class MatPartBlock extends Block implements IColorHandler {
     }
 
     @Override
-    public int getBlockColor(BlockState state, @Nullable BlockGetter world, @Nullable BlockPos pos, int i) {
-        return i == 0 ? material.getRbg() : -1;
+    public int getColor(BlockState p_92567_, @Nullable BlockAndTintGetter p_92568_, @Nullable BlockPos p_92569_, int p_92570_) {
+        return 0;
     }
 }

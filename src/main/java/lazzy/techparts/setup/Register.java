@@ -1,7 +1,8 @@
 package lazzy.techparts.setup;
 
 import lazzy.techparts.Ref;
-import lazzy.techparts.blocks.TechPartsBlocks;
+import lazzy.techparts.items.blocks.TechPartsBlocks;
+import lazzy.techparts.items.MatDeclaration;
 import lazzy.techparts.items.TechPartsItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.state.BlockBehaviour;

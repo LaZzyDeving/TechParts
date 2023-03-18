@@ -4,13 +4,13 @@ package lazzy.techparts.items;
 //import static muramasa.gregtech.data.Material.*;
 
 
+import lazzy.techparts.items.materials.Material;
+import lazzy.techparts.items.materials.Parts;
 import lazzy.techparts.setup.Register;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.silentchaos512.lib.registry.ItemRegistryObject;
-
-import java.util.function.Supplier;
+import net.minecraftforge.registries.RegistryObject;
 
 public class TechPartsItems {
 
@@ -20,16 +20,18 @@ public class TechPartsItems {
 
     }
 
-    public static <T extends Item> ItemRegistryObject<T> register(String name, Supplier<T> item) {
-        return new ItemRegistryObject<>(ITEMS.register(name, item));
+    //public static <Item> RegistryObject<Item> register(String name, Supplier<Item> item) {
+    //    return new RegistryObject<>(ITEMS.register(name, item));
+    //}
+
+
+    //Private because only for Basic Items
+    private static RegistryObject<Item> registerBasicItem(String name) {
+        return ITEMS.register(name, () -> new Item(Register.baseProps()));
     }
 
-
-    //For "normal" Items
-    public static ItemRegistryObject<Item> registerBasicItem(String name) {
-        // Registers a generic, basic item with no special properties.
-        // Also second step use for MatDeclaration//MatPartItems
-        return register(name, () -> new Item(Register.baseProps()));
+    public static RegistryObject<MatPartItem> registerMatPartItem(Material mat, Parts part){
+        return ITEMS.register(mat.getID()+"_"+part.getID(),()->new MatPartItem(mat,part));
     }
 
 
@@ -40,8 +42,8 @@ public class TechPartsItems {
     //Items starting here
 
     // TODO: Datagen for Jsons for these
-    public static final ItemRegistryObject<Item> COMPUTER_MONITOR = registerBasicItem("computer_monitor");
-    public static final ItemRegistryObject<Item> GRAVI_STAR = registerBasicItem("gravi_star");
+    public static final RegistryObject<Item> COMPUTER_MONITOR = registerBasicItem("computer_monitor");
+    public static final RegistryObject<Item> GRAVI_STAR = registerBasicItem("gravi_star");
 
     //To Seperate simple model from advanced models for BasicItems
 

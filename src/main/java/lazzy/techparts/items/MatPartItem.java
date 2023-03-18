@@ -1,5 +1,7 @@
-package lazzy.techparts.items.materials;
+package lazzy.techparts.items;
 
+import lazzy.techparts.items.materials.Material;
+import lazzy.techparts.items.materials.Parts;
 import lazzy.techparts.setup.client.IColorHandler;
 import lazzy.techparts.setup.Register;
 import net.minecraft.world.item.Item;

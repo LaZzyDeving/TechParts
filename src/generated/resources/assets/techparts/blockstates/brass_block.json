@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "techparts:block/brass_block"
+      "model": "techparts:block/brass_block_block"
     }
   }
 }

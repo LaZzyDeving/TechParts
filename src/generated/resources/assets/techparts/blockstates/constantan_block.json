@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "techparts:block/constantan_block"
+      "model": "techparts:block/constantan_block_block"
     }
   }
 }
