@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "techparts:block/manasteel_block_block"
+      "model": "techparts:block/manasteel_block"
     }
   }
 }

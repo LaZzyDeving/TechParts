@@ -36,7 +36,7 @@ public class BlockModelProvider extends BlockStateProvider {
         String name = block.getMaterial().getID()+"_"+block.getPart().getID();
         String style = block.getMaterial().getStyle();
         System.out.println("STYLE: "+style);
-        simpleBlock(block, models().singleTexture(name + "_block", mcLoc("cube_all"), "all", ResourceLocation.tryParse("techparts:block/"+style+"/"+block.getPart().getID()))
+        simpleBlock(block, models().singleTexture(name, mcLoc("cube_all"), "all", ResourceLocation.tryParse("techparts:block/"+style+"/"+block.getPart().getID()))
                 .element()
                 .face(Direction.NORTH).tintindex(0).uvs(0,0,16,16).texture("#all").end()
                 .face(Direction.SOUTH).tintindex(0).uvs(0,0,16,16).texture("#all").end()
@@ -45,6 +45,9 @@ public class BlockModelProvider extends BlockStateProvider {
                 .face(Direction.UP).tintindex(0).uvs(0,0,16,16).texture("#all").end()
                 .face(Direction.DOWN).tintindex(0).uvs(0,0,16,16).texture("#all").end()
                 .end().texture("particle", "#all"));
+
+
+
 
     }
 

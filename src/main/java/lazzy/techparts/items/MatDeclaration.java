@@ -27,15 +27,15 @@ public class MatDeclaration{
     public static final Collection<RegistryObject<MatPartItem>> MATERIAL_PART_ITEMS = new ArrayList<>();
     public static final Collection<RegistryObject<MatPartBlock>> MATERIAL_PART_BLOCKS = new ArrayList<>();
     public static final Collection<RegistryObject<MatPartBlockItem>> MATERIAL_PART_BLOCKITEMS = new ArrayList<>();
-    static EnumSet<Parts> metal = EnumSet.of(Parts.DUST,Parts.INGOT,Parts.RAW, NUGGET,BLOCK);
+    static EnumSet<Parts> METAL = EnumSet.of(Parts.DUST,Parts.INGOT,Parts.RAW, NUGGET,BLOCK);
     static EnumSet<Parts> gem = EnumSet.of(Parts.GEM,Parts.LENSE);
 
 
     public static void init(){
 
-        createMaterial(Material.CONSTANTAN,metal);
-        createMaterial(Material.BRASS,metal);
-        createMaterial(Material.MANASTEEL,metal);
+        createMaterial(Material.CONSTANTAN,METAL,FRAME);
+        createMaterial(Material.BRASS,METAL);
+        createMaterial(Material.MANASTEEL,METAL);
 
     }
 

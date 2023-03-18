@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "techparts:block/constantan_block",
   "textures": {
     "layer0": "techparts:block/dull/block"
   }

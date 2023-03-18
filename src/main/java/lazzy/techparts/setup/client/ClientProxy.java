@@ -4,8 +4,10 @@ import lazzy.techparts.Ref;
 import lazzy.techparts.items.MatPartItem;
 import lazzy.techparts.items.blocks.MatPartBlock;
 import lazzy.techparts.items.blocks.MatPartBlockItem;
-import net.minecraft.client.color.block.BlockColors;
+import lazzy.techparts.items.materials.Parts;
 import net.minecraft.client.color.item.ItemColors;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,9 +36,8 @@ public class ClientProxy {
     //TODO: Get that to work
     @SubscribeEvent
     public static void registerBlockColors(ColorHandlerEvent.Block event){
-        BlockColors blockColors = event.getBlockColors();
 
-        for (RegistryObject<? extends MatPartBlock> block : MATERIAL_PART_BLOCKS) {
+        for (RegistryObject<MatPartBlock> block : MATERIAL_PART_BLOCKS) {
 
             //blockColors.register(blockobj ->blockColors.register(new BlockColor(), blockobj.getBlock()));
 
@@ -44,7 +45,9 @@ public class ClientProxy {
 
             event.getBlockColors().register((state, level, pos, tintIndex) -> block.get().getMaterial().getRbg(), block.get());
 
-
+            if (block.get().getPart() == Parts.FRAME){
+                ItemBlockRenderTypes.setRenderLayer(block.get(), RenderType.translucent());
+            }
         }
     }
 

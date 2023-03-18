@@ -17,6 +17,10 @@ public class MatPartBlock extends Block implements BlockColor {
 
     public MatPartBlock(Material material, Parts part) {
         super(Register.baseBlockProps());
+        //  To prevent translucent Frames from wallhacking
+        if(part == Parts.FRAME){
+            super.properties.noCollission();
+        }
         this.material = material;
         this.part = part;
     }

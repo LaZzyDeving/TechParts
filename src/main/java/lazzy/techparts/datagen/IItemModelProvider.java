@@ -59,7 +59,7 @@ public class IItemModelProvider extends ItemModelProvider {
             switch (part){
                 case FRAME:
                 case BLOCK:
-                    getBuilder(mat.getID()+"_"+part.getID()).parent(getExistingFile(ResourceLocation.tryParse("techparts:block/"+mat.getStyle()+"/"+part.getID())))
+                    getBuilder(mat.getID()+"_"+part.getID()).parent(getExistingFile(ResourceLocation.tryParse("techparts:block/"+mat.getID()+"_"+part.getID())))
                             .texture("layer0","block/"+mat.getStyle()+"/"+part.getID());
                     break;
                 default:
