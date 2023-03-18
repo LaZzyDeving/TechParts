@@ -1,6 +1,7 @@
 package lazzy.techparts.datagen;
 
 import lazzy.techparts.items.MatPartItem;
+import lazzy.techparts.items.blocks.MatPartBlockItem;
 import lazzy.techparts.items.materials.Material;
 import lazzy.techparts.items.materials.Parts;
 import net.minecraft.data.DataGenerator;
@@ -11,10 +12,11 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 import static lazzy.techparts.Ref.ID;
+import static lazzy.techparts.items.MatDeclaration.MATERIAL_PART_BLOCKITEMS;
 import static lazzy.techparts.items.MatDeclaration.MATERIAL_PART_ITEMS;
 
-public class ItemOverlayTexture extends ItemModelProvider {
-    public ItemOverlayTexture(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+public class IItemModelProvider extends ItemModelProvider {
+    public IItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, ID, existingFileHelper);
     }
 
@@ -50,28 +52,20 @@ public class ItemOverlayTexture extends ItemModelProvider {
             }
         }
 
-/*        for(RegistryObject<? extends MatPartBlockItem> mP: MATERIAL_PART_BLOCKITEMS){
-            mat = mP;
+        for(RegistryObject<? extends MatPartBlockItem> mP: MATERIAL_PART_BLOCKITEMS) {
+            mat = mP.get().getMaterial();
             part = mP.get().getPart();
             //iId = String.valueOf(mP.getItem().getId());
             switch (part){
-                case DUST:
-                    getBuilder(mat.getID()+"_"+part.getID()).parent(itemGenerated)
-                            .texture("layer0",modLoc("item/material/"+mat.getStyle()+"/"+part.getID()));
-                    break;
-                case BOLT:
-                case BUZZSAW_BLADE:
-                case INGOT:
-                case GEAR:
-                case RAW:
-                    getBuilder(mat.getID()+"_"+part.getID()).parent(itemGenerated)
-                            .texture("layer0",modLoc("item/material/"+mat.getStyle()+"/"+part.getID()))
-                            .texture("layer1",modLoc("item/material/"+mat.getStyle()+"/"+part.getID()+"_overlay"));
+                case FRAME:
+                case BLOCK:
+                    getBuilder(mat.getID()+"_"+part.getID()).parent(getExistingFile(ResourceLocation.tryParse("techparts:block/"+mat.getStyle()+"/"+part.getID())))
+                            .texture("layer0","block/"+mat.getStyle()+"/"+part.getID());
                     break;
                 default:
                     break;
             }
-        }*/
+        }
 
     }
 }

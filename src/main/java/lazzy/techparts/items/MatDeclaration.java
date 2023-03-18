@@ -25,8 +25,8 @@ public class MatDeclaration{
 
 
     public static final Collection<RegistryObject<MatPartItem>> MATERIAL_PART_ITEMS = new ArrayList<>();
-    public static final Collection<RegistryObject<? extends MatPartBlock>> MATERIAL_PART_BLOCKS = new ArrayList<>();
-    public static final Collection<RegistryObject<? extends MatPartBlockItem>> MATERIAL_PART_BLOCKITEMS = new ArrayList<>();
+    public static final Collection<RegistryObject<MatPartBlock>> MATERIAL_PART_BLOCKS = new ArrayList<>();
+    public static final Collection<RegistryObject<MatPartBlockItem>> MATERIAL_PART_BLOCKITEMS = new ArrayList<>();
     static EnumSet<Parts> metal = EnumSet.of(Parts.DUST,Parts.INGOT,Parts.RAW, NUGGET,BLOCK);
     static EnumSet<Parts> gem = EnumSet.of(Parts.GEM,Parts.LENSE);
 

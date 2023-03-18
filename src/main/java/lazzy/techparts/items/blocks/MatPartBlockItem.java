@@ -1,15 +1,28 @@
 package lazzy.techparts.items.blocks;
 
+import lazzy.techparts.items.materials.Material;
+import lazzy.techparts.items.materials.Parts;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.ItemStack;
 
 public class MatPartBlockItem extends BlockItem{
 
-    public MatPartBlockItem(Block p_40565_, Properties p_40566_) {
-        super(p_40565_, p_40566_);
+
+    public MatPartBlockItem(MatPartBlock block, Properties p_40566_) {
+        super(block, p_40566_);
     }
 
+    public Material getMaterial(){
+        return ((MatPartBlock) super.getBlock()).getMaterial();
+    }
 
-    //Has .getBlock()
+    public Parts getPart(){
+        return ((MatPartBlock) super.getBlock()).getPart();
+    }
+
+    public int getItemColor(ItemStack stack, int i) {
+        return this.getMaterial().getRbg();
+    }
+
 
 }

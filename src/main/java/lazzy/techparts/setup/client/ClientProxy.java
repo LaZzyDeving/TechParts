@@ -3,6 +3,7 @@ package lazzy.techparts.setup.client;
 import lazzy.techparts.Ref;
 import lazzy.techparts.items.MatPartItem;
 import lazzy.techparts.items.blocks.MatPartBlock;
+import lazzy.techparts.items.blocks.MatPartBlockItem;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraftforge.api.distmarker.Dist;
@@ -11,8 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
-import static lazzy.techparts.items.MatDeclaration.MATERIAL_PART_BLOCKS;
-import static lazzy.techparts.items.MatDeclaration.MATERIAL_PART_ITEMS;
+import static lazzy.techparts.items.MatDeclaration.*;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT,modid = Ref.ID,bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientProxy {
@@ -23,6 +23,10 @@ public class ClientProxy {
         for(RegistryObject<MatPartItem> mp: MATERIAL_PART_ITEMS){
             itemColors.register((stack, index) -> index > 0 ? -1 : mp.get().getItemColor(stack, 0),mp.get().asItem());
         }
+        for(RegistryObject<MatPartBlockItem> mp:MATERIAL_PART_BLOCKITEMS){
+            itemColors.register((stack, index) -> index > 0 ? -1 : mp.get().getItemColor(stack, 0),mp.get().asItem());
+        }
+
 
 
     }

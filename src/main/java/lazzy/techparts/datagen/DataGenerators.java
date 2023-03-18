@@ -15,7 +15,7 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
         if( event.includeClient()){
             generator.addProvider(new BlockModelProvider(generator,event.getExistingFileHelper()));
-            generator.addProvider(new ItemOverlayTexture(generator,event.getExistingFileHelper()));
+            generator.addProvider(new IItemModelProvider(generator,event.getExistingFileHelper()));
             generator.addProvider(new LangGenerator(generator,"en_us"));
         }
     }

@@ -29,7 +29,7 @@ public class TechPartsBlocks {
         return ITEMS.register(name, ()->new BlockItem(block.get(),Register.baseProps()));
     }
 
-    private static<T extends Block> RegistryObject<MatPartBlockItem> registerMatPartBlockItem(String name, RegistryObject<T> block){
+    private static<T extends MatPartBlock> RegistryObject<MatPartBlockItem> registerMatPartBlockItem(String name, RegistryObject<T> block){
         return ITEMS.register(name, ()->new MatPartBlockItem(block.get(),Register.baseProps()));
     }
 
