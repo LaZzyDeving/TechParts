@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/kimberlite_frame",
+  "textures": {
+    "layer0": "techparts:block/none/frame"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/lead_block",
+  "textures": {
+    "layer0": "techparts:block/dull/block"
+  }
+}

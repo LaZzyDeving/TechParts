@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/hssg_frame",
+  "textures": {
+    "layer0": "techparts:block/metallic/frame"
+  }
+}

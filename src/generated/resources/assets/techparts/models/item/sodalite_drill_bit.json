@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/lapis/drill_bit",
+    "layer1": "techparts:item/material/lapis/drill_bit_overlay"
+  }
+}

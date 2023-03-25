@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/olivine_block",
+  "textures": {
+    "layer0": "techparts:block/ruby/block"
+  }
+}

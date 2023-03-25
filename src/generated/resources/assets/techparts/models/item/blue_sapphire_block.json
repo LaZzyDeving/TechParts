@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/blue_sapphire_block",
+  "textures": {
+    "layer0": "techparts:block/gem_v/block"
+  }
+}

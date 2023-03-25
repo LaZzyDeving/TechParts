@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/duranium_block",
+  "textures": {
+    "layer0": "techparts:block/metallic/block"
+  }
+}

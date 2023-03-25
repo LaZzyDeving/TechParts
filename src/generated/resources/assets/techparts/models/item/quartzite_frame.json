@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/quartzite_frame",
+  "textures": {
+    "layer0": "techparts:block/quartz/frame"
+  }
+}

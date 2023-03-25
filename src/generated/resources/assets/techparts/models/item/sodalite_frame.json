@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/sodalite_frame",
+  "textures": {
+    "layer0": "techparts:block/lapis/frame"
+  }
+}

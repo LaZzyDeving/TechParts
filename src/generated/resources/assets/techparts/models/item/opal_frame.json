@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/opal_frame",
+  "textures": {
+    "layer0": "techparts:block/ruby/frame"
+  }
+}

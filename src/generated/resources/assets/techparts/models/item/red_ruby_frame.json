@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/red_ruby_frame",
+  "textures": {
+    "layer0": "techparts:block/ruby/frame"
+  }
+}

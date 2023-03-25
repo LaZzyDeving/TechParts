@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/glowstone_frame",
+  "textures": {
+    "layer0": "techparts:block/shiny/frame"
+  }
+}

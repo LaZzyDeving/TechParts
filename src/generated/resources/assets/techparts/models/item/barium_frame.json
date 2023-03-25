@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/barium_frame",
+  "textures": {
+    "layer0": "techparts:block/metallic/frame"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/cerium_block",
+  "textures": {
+    "layer0": "techparts:block/shiny/block"
+  }
+}

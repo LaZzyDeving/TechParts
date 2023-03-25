@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/none/gem",
+    "layer1": "techparts:item/material/none/gem_overlay"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/topaz_block",
+  "textures": {
+    "layer0": "techparts:block/gem_h/block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/enriched_naquadah_block",
+  "textures": {
+    "layer0": "techparts:block/shiny/block"
+  }
+}

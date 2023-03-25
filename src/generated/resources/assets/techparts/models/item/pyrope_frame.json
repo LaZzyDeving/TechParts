@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/pyrope_frame",
+  "textures": {
+    "layer0": "techparts:block/metallic/frame"
+  }
+}

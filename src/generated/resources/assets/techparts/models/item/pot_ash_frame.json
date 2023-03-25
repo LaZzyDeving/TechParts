@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/pot_ash_frame",
+  "textures": {
+    "layer0": "techparts:block/dull/frame"
+  }
+}

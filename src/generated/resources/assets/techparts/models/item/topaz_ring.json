@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/gem_h/ring",
+    "layer1": "techparts:item/material/gem_h/ring_overlay"
+  }
+}

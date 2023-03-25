@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/green_schist_block",
+  "textures": {
+    "layer0": "techparts:block/none/block"
+  }
+}

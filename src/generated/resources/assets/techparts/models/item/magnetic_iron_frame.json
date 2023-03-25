@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/magnetic_iron_frame",
+  "textures": {
+    "layer0": "techparts:block/metallic/frame"
+  }
+}

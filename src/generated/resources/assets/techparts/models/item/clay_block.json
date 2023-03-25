@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/clay_block",
+  "textures": {
+    "layer0": "techparts:block/rough/block"
+  }
+}

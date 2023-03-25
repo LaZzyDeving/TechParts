@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/black_steel_frame",
+  "textures": {
+    "layer0": "techparts:block/metallic/frame"
+  }
+}

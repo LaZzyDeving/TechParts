@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/lazurite_block",
+  "textures": {
+    "layer0": "techparts:block/lapis/block"
+  }
+}

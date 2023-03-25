@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/cobalt_oxide_frame",
+  "textures": {
+    "layer0": "techparts:block/dull/frame"
+  }
+}

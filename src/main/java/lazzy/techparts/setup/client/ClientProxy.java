@@ -2,8 +2,8 @@ package lazzy.techparts.setup.client;
 
 import lazzy.techparts.Ref;
 import lazzy.techparts.items.MatPartItem;
-import lazzy.techparts.items.blocks.MatPartBlock;
-import lazzy.techparts.items.blocks.MatPartBlockItem;
+import lazzy.techparts.blocks.MatPartBlock;
+import lazzy.techparts.blocks.MatPartBlockItem;
 import lazzy.techparts.items.materials.Parts;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -29,8 +29,6 @@ public class ClientProxy {
             itemColors.register((stack, index) -> index > 0 ? -1 : mp.get().getItemColor(stack, 0),mp.get().asItem());
         }
 
-
-
     }
 
     //TODO: Get that to work
@@ -38,10 +36,6 @@ public class ClientProxy {
     public static void registerBlockColors(ColorHandlerEvent.Block event){
 
         for (RegistryObject<MatPartBlock> block : MATERIAL_PART_BLOCKS) {
-
-            //blockColors.register(blockobj ->blockColors.register(new BlockColor(), blockobj.getBlock()));
-
-            System.out.println("HEREZ: " + block);
 
             event.getBlockColors().register((state, level, pos, tintIndex) -> block.get().getMaterial().getRbg(), block.get());
 

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/quartz/chunk",
+    "layer1": "techparts:item/material/quartz/chunk_overlay"
+  }
+}

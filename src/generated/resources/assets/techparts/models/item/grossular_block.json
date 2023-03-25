@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/grossular_block",
+  "textures": {
+    "layer0": "techparts:block/rough/block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "techparts:block/silicon_block"
+    }
+  }
+}

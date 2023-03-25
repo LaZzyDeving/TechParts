@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/cooperite_block",
+  "textures": {
+    "layer0": "techparts:block/metallic/block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/red_ruby_block",
+  "textures": {
+    "layer0": "techparts:block/ruby/block"
+  }
+}

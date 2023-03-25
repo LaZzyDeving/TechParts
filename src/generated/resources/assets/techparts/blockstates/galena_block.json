@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "techparts:block/galena_block"
+    }
+  }
+}

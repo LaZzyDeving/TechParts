@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/magnalium_frame",
+  "textures": {
+    "layer0": "techparts:block/dull/frame"
+  }
+}

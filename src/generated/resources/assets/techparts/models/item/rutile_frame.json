@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/rutile_frame",
+  "textures": {
+    "layer0": "techparts:block/gem_h/frame"
+  }
+}

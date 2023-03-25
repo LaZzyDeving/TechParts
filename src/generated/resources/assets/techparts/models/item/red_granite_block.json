@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/red_granite_block",
+  "textures": {
+    "layer0": "techparts:block/rough/block"
+  }
+}

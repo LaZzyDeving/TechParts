@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/brick_frame",
+  "textures": {
+    "layer0": "techparts:block/rough/frame"
+  }
+}

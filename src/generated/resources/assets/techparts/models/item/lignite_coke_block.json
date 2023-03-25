@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/lignite_coke_block",
+  "textures": {
+    "layer0": "techparts:block/lignite/block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/phosphorus_frame",
+  "textures": {
+    "layer0": "techparts:block/flint/frame"
+  }
+}

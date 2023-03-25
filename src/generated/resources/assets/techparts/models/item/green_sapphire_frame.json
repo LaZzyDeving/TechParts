@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/green_sapphire_frame",
+  "textures": {
+    "layer0": "techparts:block/gem_h/frame"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/marble_block",
+  "textures": {
+    "layer0": "techparts:block/none/block"
+  }
+}

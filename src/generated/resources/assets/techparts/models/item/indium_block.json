@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/indium_block",
+  "textures": {
+    "layer0": "techparts:block/metallic/block"
+  }
+}

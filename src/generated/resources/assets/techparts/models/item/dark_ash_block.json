@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/dark_ash_block",
+  "textures": {
+    "layer0": "techparts:block/metallic/block"
+  }
+}

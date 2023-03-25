@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/metallic/plate_dense",
+    "layer1": "techparts:item/material/metallic/plate_dense_overlay"
+  }
+}

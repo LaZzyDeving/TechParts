@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/fiber_reinforced_epoxy_resin_frame",
+  "textures": {
+    "layer0": "techparts:block/dull/frame"
+  }
+}

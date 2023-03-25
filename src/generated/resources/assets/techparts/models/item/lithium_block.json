@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/lithium_block",
+  "textures": {
+    "layer0": "techparts:block/dull/block"
+  }
+}

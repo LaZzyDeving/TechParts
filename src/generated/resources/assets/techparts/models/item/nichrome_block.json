@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/nichrome_block",
+  "textures": {
+    "layer0": "techparts:block/metallic/block"
+  }
+}

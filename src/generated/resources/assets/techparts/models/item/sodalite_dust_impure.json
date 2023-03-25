@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/lapis/dust_impure",
+    "layer1": "techparts:item/material/lapis/dust_impure_overlay"
+  }
+}

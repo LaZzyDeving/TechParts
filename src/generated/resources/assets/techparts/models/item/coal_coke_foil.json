@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "techparts:item/material/lignite/foil",
+    "layer1": "techparts:item/material/lignite/foil_overlay"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/amethyst_frame",
+  "textures": {
+    "layer0": "techparts:block/ruby/frame"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/bismuth_bronze_block",
+  "textures": {
+    "layer0": "techparts:block/dull/block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/fireclay_block",
+  "textures": {
+    "layer0": "techparts:block/rough/block"
+  }
+}

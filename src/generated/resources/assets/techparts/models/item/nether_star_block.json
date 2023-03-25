@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/nether_star_block",
+  "textures": {
+    "layer0": "techparts:block/diamond/block"
+  }
+}

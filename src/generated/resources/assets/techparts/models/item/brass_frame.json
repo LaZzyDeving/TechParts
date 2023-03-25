@@ -1,0 +1,6 @@
+{
+  "parent": "techparts:block/brass_frame",
+  "textures": {
+    "layer0": "techparts:block/dull/frame"
+  }
+}

@@ -1,34 +1,60 @@
 package lazzy.techparts.items.materials;
 
 public enum Parts {
+    //OREPROCESS
     DUST("dust"),
     DUST_SMALL("dust_small"),
-    DUST_TINY("dust_small"),
-    RAW("raw_ore"),
-    CRUSHED("crsuhed_ore"),
-    CENTRIFUGED("centrifuged_crushed_ore"),
-    PURIFIED("purified_crushed_ore"),
+    DUST_IMPURE("dust_impure"),
+    DUST_PURE("dust_pure"),
+    DUST_TINY("dust_tiny"),
+    ORE_RAW("raw_ore"),
+    ORE_CRUSHED("crushed_ore"),
+    ORE_CENTRIFUGED("crushed_centrifuged"),
+    ORE_PURIFIED("crushed_purified"),
+    ORE_CHUNK("chunk"),
 
+    //DONE INGOT
     INGOT("ingot"),
+    INGOT_HOT("ingot_hot"),
     NUGGET("nugget"),
-    GEM("gem"),
-    POLISHED("polished_gem"),
-    LENSE("lense"),
+    BLOCK("block"),
 
+
+    //PARTS
     PLATE("plate"),
     ROD("rod"),
     RING("ring"),
-    FOIL("foiled"),
+    FOIL("foil"),
     BOLT("bolt"),
     SCREW("screw"),
     GEAR("gear"),
-    SMALLGEAR("small_gear"),
-    WIRE("wire"),
+    GEAR_SMALL("gear_small"),
+    WIRE("wire_fine"),
     ROTOR("rotor"),
-    BUZZSAW_BLADE("buzzsaw_blade"),
-    DENSEPLATE("dense_plate"),
-    BLOCK("block"),
-    FRAME("frame");
+    PLATE_DENSE("plate_dense"),
+    FRAME("frame"),
+
+    //TOOLS
+    TOOL_BUZZSAW("buzzsaw_blade","Buzzsaw Blade"),
+    TOOL_CHAINSAW("chainsaw_bit","Chainsaw Bit"),
+    TOOL_DRILL("drill_bit","Drill Bit"),
+    CELL("cell"),
+
+    //GEM
+    GEM("gem"),
+    GEM_BRITTLE("gem_brittle"),
+    GEM_CHIPPED("gem_chipped"),
+    GEM_EXQUIISITE("gem_exquisite"),
+    GEM_FLAWED("gem_flawed"),
+    GEM_FLAWLESS("gem_flawless"),
+    GEM_POLISHED("gem_polished"),
+    LENS("lens");
+
+
+
+
+
+
 
     private final String id;
     private final String name;
