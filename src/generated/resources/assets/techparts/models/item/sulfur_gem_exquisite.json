@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "techparts:item/material/dull/gem_exquisite",
-    "layer1": "techparts:item/material/dull/gem_exquisite_overlay"
-  }
-}

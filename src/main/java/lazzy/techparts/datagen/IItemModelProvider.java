@@ -43,6 +43,8 @@ public class IItemModelProvider extends ItemModelProvider {
 
                 // NO Overlay - keep if I ever want to clean them up as many part overlays are empty for all material textures
                 case GEM_FLAWLESS:
+                case ORE_CLUMP:
+                case CRYSTAL:
                     getBuilder(mat.getID()+"_"+part.getID()).parent(itemGenerated)
                            .texture("layer0",modLoc("item/material/"+mat.getTexture()+"/"+part.getID()));
                     break;

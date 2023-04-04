@@ -32,11 +32,11 @@ public class MatDeclaration{
         Parts Sets
      */
 
-        EnumSet<Parts> metal = EnumSet.of(Parts.DUST,Parts.INGOT,Parts.ORE_RAW, NUGGET,BLOCK);
+        EnumSet<Parts> metal = EnumSet.of(Parts.DUST,Parts.INGOT, NUGGET,BLOCK);
         EnumSet<Parts> vanillaMetals = EnumSet.of(Parts.INGOT,Parts.ORE_RAW, NUGGET,BLOCK);
 
         EnumSet<Parts> dusts = EnumSet.of(DUST,DUST_SMALL,DUST_TINY,DUST_IMPURE,DUST_PURE);
-        EnumSet<Parts> ores = EnumSet.of(ORE_PURIFIED,ORE_CENTRIFUGED,ORE_RAW,ORE_CHUNK,ORE_CRUSHED);
+        EnumSet<Parts> ores = EnumSet.of(ORE_PURIFIED,ORE_CENTRIFUGED,ORE_RAW,ORE_CHUNK,ORE_CRUSHED,ORE_CLUMP,CRYSTAL);
 
         EnumSet<Parts> dustsandores = EnumSet.copyOf(dusts);
         dustsandores.addAll(ores);
@@ -62,6 +62,10 @@ public class MatDeclaration{
 
         //Common Mod Materials
         createMaterialGroupAddSingles(CERTUS_QUARTZ,ores,PLATE,PLATE_DENSE,RING);
+        createMaterialGroupAddSingles(CINNABAR,dustsandores,LENS,GEM_POLISHED);
+        createMaterialGroupExcludeSingles(SULFUR,dustsandores,DUST);
+        createMaterialGroupExcludeSingles(OBSIDIAN,all,GEAR,GEM_POLISHED,LENS);
+        createMaterialSingles(REFINED_OBSIDIAN,GEAR,GEM_POLISHED,LENS);
 
         //Liquids
         //createLiquid(GLUE);

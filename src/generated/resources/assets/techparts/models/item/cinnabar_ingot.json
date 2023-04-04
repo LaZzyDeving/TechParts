@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "techparts:item/material/rough/ingot",
-    "layer1": "techparts:item/material/rough/ingot_overlay"
-  }
-}

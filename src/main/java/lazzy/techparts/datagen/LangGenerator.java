@@ -83,6 +83,9 @@ public class LangGenerator extends LanguageProvider {
             case WIRE:
                 this.add(item,"Fine "+mName+" Wire");
                 break;
+            case GEM_EXQUISITE:
+                this.add(item,"Exquisite "+mName+" Gem");
+                break;
             case ORE_RAW:
                 this.add(item,"Raw "+ mName+" Ore");
                 break;

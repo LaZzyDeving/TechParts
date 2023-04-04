@@ -31,7 +31,7 @@ public class ClientProxy {
 
     }
 
-    //TODO: Get that to work
+
     @SubscribeEvent
     public static void registerBlockColors(ColorHandlerEvent.Block event){
 

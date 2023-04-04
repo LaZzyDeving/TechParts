@@ -13,6 +13,9 @@ public enum Parts {
     ORE_PURIFIED("crushed_purified"),
     ORE_CHUNK("chunk"),
 
+    ORE_CLUMP("clump"),
+    CRYSTAL("crystal"),
+
     //DONE INGOT
     INGOT("ingot"),
     INGOT_HOT("ingot_hot"),
@@ -44,7 +47,7 @@ public enum Parts {
     GEM("gem"),
     GEM_BRITTLE("gem_brittle"),
     GEM_CHIPPED("gem_chipped"),
-    GEM_EXQUIISITE("gem_exquisite"),
+    GEM_EXQUISITE("gem_exquisite"),
     GEM_FLAWED("gem_flawed"),
     GEM_FLAWLESS("gem_flawless"),
     GEM_POLISHED("gem_polished"),

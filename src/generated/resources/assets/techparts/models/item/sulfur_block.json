@@ -1,6 +1,0 @@
-{
-  "parent": "techparts:block/sulfur_block",
-  "textures": {
-    "layer0": "techparts:block/dull/block"
-  }
-}

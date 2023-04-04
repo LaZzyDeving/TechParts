@@ -24,6 +24,11 @@ public enum Material {
      */
 
     CERTUS_QUARTZ(0x55FFFF, "certus_quartz",Texture.QUARTZ),
+    CINNABAR(0x960000,"cinnabar",ROUGH),
+    SULFUR(0xc8c800,"sulfur",DULL),
+
+    OBSIDIAN(0x503264,"obsidian",DULL),
+    REFINED_OBSIDIAN(0x503264,"refined_obsidian",DULL),
 
     //START OF ALL
     BRASS(0xffb400,"brass"),
@@ -91,7 +96,7 @@ public enum Material {
     POTASSIUM(0xfafafa,"potassium",METALLIC),
     SILICON(0x3c3c50,"silicon",METALLIC),
     SODIUM(0x000096,"sodium",METALLIC),
-    SULFUR(0xc8c800,"sulfur",DULL),
+
     TIN(0xdcdcdc,"tin",DULL),
     TRITIUM(0xff0000,"tritium",METALLIC),
     VANADIUM(0x323232,"vanadium",METALLIC),
@@ -120,7 +125,7 @@ public enum Material {
     MAGNESITE(0xfafab4,"magnesite",METALLIC),
     MAGNETITE(0x1e1e1e,"magnetite",METALLIC),
     MOLYDENITE(0x91919,"molybdenite",METALLIC),
-    OBSIDIAN(0x503264,"obsidian",DULL),
+
     PHOSPHATE(0xffff00,"phosphate",DULL),
     POLYDIMETHYLSILOXANE(0xf5f5f5,"polydimethylsiloxane",DULL),
     PYRITE(0x967828,"pyrite",ROUGH),
@@ -190,7 +195,7 @@ public enum Material {
      */
 
 
-    CINNABAR(0x960000,"cinnabar",ROUGH),
+
 
     /*
         METALS
